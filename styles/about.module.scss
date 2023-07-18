@@ -1,0 +1,54 @@
+@use './variables' as v;
+.container {
+        h1 {
+            text-transform: uppercase;
+            position: relative;
+            display: inline;
+            font-size: 1.5rem;
+            &::after {
+                position: absolute;
+                content: '';
+                bottom:0;
+                left:0;
+                width: 70%;
+                height: 4px;
+                background-color: v.$highlight;
+            }
+        }
+
+        .content {
+            margin-top: 2rem;
+            margin-right: 3rem;
+
+            h3 {
+                font-size: 1.4rem;
+                color: v.$highlight;
+                letter-spacing: 2px;
+            }
+            h5 {
+                font-size: 1.3rem;
+                color: v.$font-mid;
+                letter-spacing: 2.5px;
+            }
+            p {
+                margin-top: 1rem;
+                span {
+                    color: v.$highlight;
+                    font-weight:500;
+                }
+            }
+
+            .tech_stack{
+                ul {
+                color: v.$highlight;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(140px, 200px));
+                gap: 0px 10px;
+                padding: 0px;
+                margin: 20px 0px 0px;
+                overflow: hidden;
+                list-style: none;
+                }
+            }
+        }
+}

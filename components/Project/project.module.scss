@@ -1,0 +1,133 @@
+@use '../../styles/variables' as v;
+
+.container {
+    position: relative;
+
+    .image {
+        opacity: 1;
+        display: block;
+        height: 250px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .text_container {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 5%;
+        left: 40%;
+        width: 400px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+         
+        h3 {
+            color: v.$highlight;
+            margin-left: auto;
+            margin-bottom: 27px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+
+    .image {
+        opacity: 0.4;
+    }
+      
+    .text_container {
+        opacity: 1;
+    }
+
+    .description {
+        color: v.$font-light;
+        font-size: 16px;
+        padding: 16px 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: #1F2833;
+        box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .icon, .tech {
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        cursor: pointer;
+        li {
+            text-transform: uppercase;
+            color: v.$font-mid;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+.container {
+    position: relative;
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .text_container {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: none;
+        padding: 1rem 0.5rem;
+        width: 80%;
+        h3 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+    }
+
+    &:hover .image {
+        opacity: 0.5;
+        filter: brightness(50%);
+    }
+      
+    &:hover .text_container {
+        opacity: 1;
+    }
+
+    .description {
+        color: v.$font-light;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+        font-size: 0.5rem;
+        padding: 0;
+    }
+    
+
+    .icon,.tech {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 0.5rem;
+        li {
+            color: v.$highlight 
+        }
+    }
+}
+
+}
