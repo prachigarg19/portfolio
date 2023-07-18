@@ -30,12 +30,12 @@ const About = () => {
             exceptional results and collaborating effectively. Continuously
             learning and adapting to provide cutting-edge solutions for clients.
           </p>
-          <p>Some Technologies that I've worked with are: </p>
+          <p>Some Technologies that I&apos;ve worked with are: </p>
         </div>
         <div className={styles.tech_stack}>
           <ul>
-            {skills.map((s) => (
-              <li>
+            {skills.map((s, index) => (
+              <li key={index}>
                 <span>•</span>
                 {s}
               </li>

@@ -1,7 +1,7 @@
 import styles from "../styles/experience.module.scss";
 import { useState } from "react";
 
-const experience = () => {
+const Experience = () => {
   let arr = {
     skyware: {
       name: "Skyware",
@@ -80,4 +80,4 @@ efficient collaboration and code management`,
   );
 };
 
-export default experience;
+export default Experience;

@@ -1,7 +1,7 @@
 import Project from "../components/Project/Project";
 import styles from "../styles/projects.module.scss";
 
-const projects = () => {
+const Projects = () => {
   const projects = [
     {
       img: "/social-gram.png",
@@ -50,4 +50,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
