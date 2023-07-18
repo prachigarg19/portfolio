@@ -6,14 +6,16 @@ const Preloader = () => {
   return (
     <div className={styles.container}>
       <Image
-        src="/coding-image.gif"
+        src="/profilePic.png"
         alt="coding-woman"
         width={300}
         height={300}
+        className={styles.profile}
       />
       <img
-        src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4000&color=FFCC00&vCenter=true&repeat=false&lines=Welcome!;Enjoy+exploring+my+web+creations+%3C3"
+        src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4000&color=66FCF1&center=true&vCenter=true&width=350&repeat=false&lines=Welcome;Enjoy+my+web+creations+ <3"
         alt="Typing SVG"
+        style={{ margin: "30px 10px" }}
       />
     </div>
   );
