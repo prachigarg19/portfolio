@@ -6,7 +6,7 @@ const Preloader = () => {
   return (
     <div className={styles.container}>
       <Image
-        src="/profilePic.png"
+        src="/giphy.gif"
         alt="coding-woman"
         width={300}
         height={300}

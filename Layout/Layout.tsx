@@ -4,6 +4,7 @@ import styles from "./layout.module.scss";
 import useDownloader from "react-use-downloader";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -69,6 +70,13 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
         <div className={styles.content_container_left}>{children}</div>
         <div className={styles.content_container_right}>
+          <Image
+            src="/profilePic.png"
+            alt="coding-woman"
+            width={300}
+            height={300}
+            className={styles.profile}
+          />
           <div className={styles.content}>
             <p>Hello! My name is </p>
             <h1>prachi garg</h1>
