@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./layout.module.scss";
 import useDownloader from "react-use-downloader";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -11,6 +12,12 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   const { download } = useDownloader();
   const [menuItem, setMenuItem] = useState<String>("home");
+  const router = useRouter();
+
+  useEffect(() => {
+    setMenuItem(router.pathname.substring(1));
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
