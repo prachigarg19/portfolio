@@ -70,13 +70,13 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
         <div className={styles.content_container_left}>{children}</div>
         <div className={styles.content_container_right}>
-          <Image
+          {/* <Image
             src="/profilePic.png"
             alt="coding-woman"
             width={300}
             height={300}
             className={styles.profile}
-          />
+          /> */}
           <div className={styles.content}>
             <p>Hello! My name is </p>
             <h1>prachi garg</h1>
