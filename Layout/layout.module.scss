@@ -4,6 +4,12 @@
 .container {
 background-color: #1F2833;
 color: white;
+-ms-overflow-style: none;  /* Internet Explorer 10+ */
+scrollbar-width: none;  /* Firefox */
+&::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 .content_container {
     display: flex;
     flex-direction: row;
@@ -65,6 +71,7 @@ color: white;
                 letter-spacing: 2px;
                 font-size: 1.2rem;
                 font-weight: 900;
+                cursor: pointer;
             }
         }
     
@@ -76,18 +83,11 @@ color: white;
         margin: 6rem 0 0 1.7rem;
         overflow-y: auto;
         height: 100vh;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar {
-            width: 5px;
+            display: none;
           }
-        
-          &::-webkit-scrollbar-thumb {
-            background: #bec4c4;
-          }
-        
-          &::-webkit-scrollbar-track {
-            background: #f1f1f1;
-          }
-        
     }
 
     .content_container_right {
@@ -176,7 +176,6 @@ color: white;
             .content_container_left{
                 position: relative;
                 margin-top: 2rem;
-                
             }
         }
 
@@ -186,12 +185,6 @@ color: white;
             position: absolute;
             top:0;
             color:v.$font-light;
-
-            .navbar_container_right {
-                ul {
-                    // flex-wrap:wrap 
-                }
-            }
         }
     }
 }

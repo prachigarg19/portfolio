@@ -16,8 +16,12 @@ const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    setMenuItem(router.pathname.substring(1));
-  }, []);
+    const extractedMenuItem =
+      router.pathname.substring(1).length === 0
+        ? "home"
+        : router.pathname.substring(1);
+    setMenuItem(extractedMenuItem);
+  }, [router.pathname]);
 
   return (
     <div className={styles.container}>
@@ -28,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className={styles.content_container}>
         <div className={styles.navbar_container}>
           <div className={styles.navbar_container_left}>
-            <p>PRACHI.</p>
+            <p onClick={() => router.push("/")}>PRACHI.</p>
           </div>
           <div className={styles.navbar_container_right}>
             <ul>

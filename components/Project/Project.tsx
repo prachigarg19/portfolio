@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./project.module.scss";
 import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -11,6 +11,7 @@ interface PropsType {
   tech: string[];
   github: string;
   deployment: string;
+  isLastElement: boolean;
 }
 const Project = ({
   img,
@@ -19,9 +20,12 @@ const Project = ({
   tech,
   github,
   deployment,
+  isLastElement,
 }: PropsType) => {
+  const ref = useRef(null);
+  console.log(ref);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={isLastElement ? ref : null}>
       <Image
         src={img}
         height={350}
