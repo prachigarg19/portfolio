@@ -11,7 +11,6 @@ interface PropsType {
   tech: string[];
   github: string;
   deployment: string;
-  isLastElement: boolean;
 }
 const Project = ({
   img,
@@ -20,12 +19,9 @@ const Project = ({
   tech,
   github,
   deployment,
-  isLastElement,
 }: PropsType) => {
-  const ref = useRef(null);
-  console.log(ref);
   return (
-    <div className={styles.container} ref={isLastElement ? ref : null}>
+    <div className={styles.container}>
       <Image
         src={img}
         height={350}

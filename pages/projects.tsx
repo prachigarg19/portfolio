@@ -44,11 +44,7 @@ const Projects = () => {
     <div className={styles.wrapper}>
       <h1>projects</h1>
       {projects.map((p, index) => (
-        <Project
-          {...p}
-          key={index}
-          isLastElement={index === projects.length - 1}
-        />
+        <Project {...p} key={index} />
       ))}
     </div>
   );
